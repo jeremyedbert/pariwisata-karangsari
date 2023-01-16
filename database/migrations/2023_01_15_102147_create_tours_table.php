@@ -17,6 +17,7 @@ return new class extends Migration {
 			$table->foreignId('admin_id');
 			$table->string('name');
 			$table->string('contact');
+			$table->string('instagram');
 			$table->text('description');
 			$table->string('open_hour');
 			$table->string('close_hour');

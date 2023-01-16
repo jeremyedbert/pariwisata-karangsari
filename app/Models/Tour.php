@@ -11,6 +11,8 @@ class Tour extends Model
 
 	protected $fillable = [
 		'name',
+		'contact',
+		'instagram',
 		'description',
 		'open_hour',
 		'close_hour',

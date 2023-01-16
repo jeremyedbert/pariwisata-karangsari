@@ -47,14 +47,21 @@
                 </li>
                 <li class="nav-item">
                     <a href="index.html">
-                        <i class="fas fa-home"></i>
+                        <i class="fas fa-pencil-alt"></i>
                         <p>Blog</p>
                         <span class="badge badge-count">5</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="index.html">
-                        <i class="fas fa-home"></i>
+                        <i class="fas fa-cog"></i>
+                        <p>Wisata</p>
+                        <span class="badge badge-count">5</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html">
+                        <i class="fas fa-user"></i>
                         <p>Admin</p>
                         <span class="badge badge-count">5</span>
                     </a>

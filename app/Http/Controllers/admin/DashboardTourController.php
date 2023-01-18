@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\Tour;
-use App\Http\Requests\StoreTourRequest;
-use App\Http\Requests\UpdateTourRequest;
+use Illuminate\Http\Request;
 
-class TourController extends Controller
+class DashboardTourController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class TourController extends Controller
      */
     public function index()
     {
-        //
+		return view('admin.tour');
     }
 
     /**
@@ -31,10 +31,10 @@ class TourController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreTourRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreTourRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -64,11 +64,11 @@ class TourController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateTourRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\Tour  $tour
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateTourRequest $request, Tour $tour)
+    public function update(Request $request, Tour $tour)
     {
         //
     }

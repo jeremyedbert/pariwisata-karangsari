@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\Blog;
-use App\Http\Requests\StoreBlogRequest;
-use App\Http\Requests\UpdateBlogRequest;
+use Illuminate\Http\Request;
 
-class BlogController extends Controller
+class DashboardBlogController extends Controller
 {
 	/**
 	 * Display a listing of the resource.
@@ -15,7 +15,7 @@ class BlogController extends Controller
 	 */
 	public function index()
 	{
-		return view('user.blog');
+		return view('admin.blogs');
 	}
 
 	/**
@@ -31,10 +31,10 @@ class BlogController extends Controller
 	/**
 	 * Store a newly created resource in storage.
 	 *
-	 * @param  \App\Http\Requests\StoreBlogRequest  $request
+	 * @param  \Illuminate\Http\Request  $request
 	 * @return \Illuminate\Http\Response
 	 */
-	public function store(StoreBlogRequest $request)
+	public function store(Request $request)
 	{
 		//
 	}
@@ -64,11 +64,11 @@ class BlogController extends Controller
 	/**
 	 * Update the specified resource in storage.
 	 *
-	 * @param  \App\Http\Requests\UpdateBlogRequest  $request
+	 * @param  \Illuminate\Http\Request  $request
 	 * @param  \App\Models\Blog  $blog
 	 * @return \Illuminate\Http\Response
 	 */
-	public function update(UpdateBlogRequest $request, Blog $blog)
+	public function update(Request $request, Blog $blog)
 	{
 		//
 	}

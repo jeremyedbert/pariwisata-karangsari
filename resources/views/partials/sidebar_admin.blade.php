@@ -2,7 +2,7 @@
     <div class="sidebar-background"></div>
     <div class="sidebar-wrapper scrollbar-inner">
         <div class="sidebar-content">
-            <div class="user">
+            {{-- <div class="user">
                 <div class="avatar-sm float-left mr-2">
                     <img src={{ url('assets/admin/img/profile.jpg') }} alt="..." class="avatar-img rounded-circle">
                 </div>
@@ -36,34 +36,30 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <ul class="nav">
                 <li class="nav-item">
-                    <a href="index.html">
+                    <a href="{{ route('admin.dashboard') }}">
                         <i class="fas fa-home"></i>
                         <p>Halaman Utama</p>
-                        <span class="badge badge-count">5</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="index.html">
+                    <a href="{{ route('admin.blog') }}">
                         <i class="fas fa-pencil-alt"></i>
                         <p>Blog</p>
-                        <span class="badge badge-count">5</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="index.html">
+                    <a href="{{ route('admin.tour') }}">
                         <i class="fas fa-cog"></i>
                         <p>Wisata</p>
-                        <span class="badge badge-count">5</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="index.html">
+                    <a href="{{ route('admin.setting') }}">
                         <i class="fas fa-user"></i>
                         <p>Admin</p>
-                        <span class="badge badge-count">5</span>
                     </a>
                 </li>
                 {{-- <li class="nav-section">

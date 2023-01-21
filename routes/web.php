@@ -28,7 +28,7 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery');
-Route::get('/contact', [ContactController::class])->name('contact');
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::prefix('/admin')->name('admin.')->group(function () {
 	Route::resource('/dashboard', DashboardController::class)->name('index', 'dashboard');
 	Route::resource('/blog', DashboardBlogController::class)->name('index', 'blog');

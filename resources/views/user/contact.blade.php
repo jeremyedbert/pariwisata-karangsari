@@ -7,9 +7,9 @@
             <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
                 <div class="col-md-9 ftco-animate pb-5 text-center">
                     <h1 class="mb-3 bread">Hubungi Kami!</h1>
-                    <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Halaman Utama <i
-                                    class="ion-ios-arrow-forward"></i></a></span> <span>Kontak <i
-                                class="ion-ios-arrow-forward"></i></span></p>
+                    <p>
+											Jangan malu-malu
+										</p>
                 </div>
             </div>
         </div>
@@ -24,7 +24,7 @@
                             <span class="icon-map-signs"></span>
                         </div>
                         <h3 class="mb-2">Alamat</h3>
-                        <p>198 West 21th Street, Suite 721 New York NY 10016</p>
+                        <p>Dusun Karangsari, Desa Lumeneng</p>
                     </div>
                 </div>
                 <div class="col-md-4 d-flex">
@@ -58,7 +58,7 @@
         </div>
     </section>
 
-    <section class="ftco-section contact-section">
+    {{-- <section class="ftco-section contact-section">
         <div class="container">
             <div class="row block-9">
                 <div class="col-md-6 order-md-last d-flex">
@@ -86,5 +86,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 @endsection

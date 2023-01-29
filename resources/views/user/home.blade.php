@@ -100,8 +100,9 @@
             <div class="row d-flex">
                 <div class="col-md-6 order-md-last heading-section pl-md-5 ftco-animate">
                     <h2 class="mb-4">Dusun Karangsari</h2>
-                    <p>Pemandangan indah dibalut dengan dinginnya udara di Dusun Karangsari. Sunrise di pagi dan sunset di sore hari</p>
-                    <p>Di seberang, Anda dapat melihat indahnya gunung ...
+                    <p>Pemandangan indah dibalut dengan dinginnya udara di Dusun Karangsari. Sunrise di pagi dan sunset di
+                        sore hari</p>
+                    <p>Indahnya pemandangan, banyak ...
                     </p>
                     {{-- <p><a href="#" class="btn btn-primary py-3 px-4">Search Destination</a></p> --}}
                 </div>
@@ -122,7 +123,7 @@
                                 <div class="icon"><span class="flaticon-route"></span></div>
                                 <div class="media-body">
                                     <h3 class="heading mb-3">Akses Jalan</h3>
-                                    <p>Tak perlu khawatir
+                                    <p>Tak perlu khawatir, kami siap membantu Anda sampai ke tujuan
                                     </p>
                                 </div>
                             </div>
@@ -164,9 +165,7 @@
                     <div class="row justify-content-start pb-3">
                         <div class="col-md-12 heading-section ftco-animate">
                             <h2 class="mb-4">Kami Siap Membantu Anda</h2>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts. Separated they live in Bookmarksgrove right at the coast of
-                                the Semantics, a large language ocean.</p>
+                            <p>Medan ke Dusun Karangsari yang sulit</p>
                         </div>
                     </div>
                     <div class="row">
@@ -201,52 +200,90 @@
     </section>
 
 
-    <section class="ftco-section">
+    <section class="ftco-section testimony-section bg-bottom" style="background-image: url(assets/user/images/bg_3.jpg);">
         <div class="container">
             <div class="row justify-content-center pb-4">
-                <div class="col-md-12 heading-section text-center ftco-animate">
-                    <h2 class="mb-4">Best Place Destination</h2>
+                <div class="col-md-7 text-center heading-section ftco-animate">
+                    <h2 class="mb-4">Apa Kata Mereka?</h2>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-3 ftco-animate">
-                    <div class="project-destination">
-                        <a href="#" class="img" style="background-image: url(assets/user/images/place-1.jpg);">
-                            <div class="text">
-                                <h3>Singapore</h3>
-                                <span>8 Tours</span>
+            <div class="row ftco-animate">
+                <div class="col-md-12">
+                    <div class="carousel-testimony owl-carousel ftco-owl">
+                        <div class="item">
+                            <div class="testimony-wrap py-4">
+                                <div class="text">
+                                    <p class="mb-4">Far far away, behind the word mountains, far from the countries
+                                        Vokalia and Consonantia, there live the blind texts.</p>
+                                    <div class="d-flex align-items-center">
+                                        <div class="user-img" style="background-image: url(assets/user/images/person_1.jpg)"></div>
+                                        <div class="pl-3">
+                                            <p class="name">Pak Carik</p>
+                                            <span class="position">Marketing Manager</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                    <div class="project-destination">
-                        <a href="#" class="img" style="background-image: url(assets/user/images/place-2.jpg);">
-                            <div class="text">
-                                <h3>Canada</h3>
-                                <span>2 Tours</span>
+                        </div>
+                        <div class="item">
+                            <div class="testimony-wrap py-4">
+                                <div class="text">
+                                    <p class="mb-4">Far far away, behind the word mountains, far from the countries
+                                        Vokalia and Consonantia, there live the blind texts.</p>
+                                    <div class="d-flex align-items-center">
+                                        <div class="user-img" style="background-image: url(assets/user/images/person_2.jpg)"></div>
+                                        <div class="pl-3">
+                                            <p class="name">Bu Novi</p>
+                                            <span class="position">Marketing Manager</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                    <div class="project-destination">
-                        <a href="#" class="img" style="background-image: url(assets/user/images/place-3.jpg);">
-                            <div class="text">
-                                <h3>Thailand</h3>
-                                <span>5 Tours</span>
+                        </div>
+                        <div class="item">
+                            <div class="testimony-wrap py-4">
+                                <div class="text">
+                                    <p class="mb-4">Far far away, behind the word mountains, far from the countries
+                                        Vokalia and Consonantia, there live the blind texts.</p>
+                                    <div class="d-flex align-items-center">
+                                        <div class="user-img" style="background-image: url(assets/user/images/person_3.jpg)"></div>
+                                        <div class="pl-3">
+                                            <p class="name">Roger Scott</p>
+                                            <span class="position">Marketing Manager</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                    <div class="project-destination">
-                        <a href="#" class="img" style="background-image: url(assets/user/images/place-4.jpg);">
-                            <div class="text">
-                                <h3>Autralia</h3>
-                                <span>5 Tours</span>
+                        </div>
+                        <div class="item">
+                            <div class="testimony-wrap py-4">
+                                <div class="text">
+                                    <p class="mb-4">Far far away, behind the word mountains, far from the countries
+                                        Vokalia and Consonantia, there live the blind texts.</p>
+                                    <div class="d-flex align-items-center">
+                                        <div class="user-img" style="background-image: url(assets/user/images/person_1.jpg)"></div>
+                                        <div class="pl-3">
+                                            <p class="name">Willy The Kid</p>
+                                            <span class="position">Buzzer SJW</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </a>
+                        </div>
+                        <div class="item">
+                            <div class="testimony-wrap py-4">
+                                <div class="text">
+                                    <p class="mb-4">Sangat menyenangkan.</p>
+                                    <div class="d-flex align-items-center">
+                                        <div class="user-img" style="background-image: url(assets/user/images/rama.png)"></div>
+                                        <div class="pl-3">
+                                            <p class="name">Rama</p>
+                                            <span class="position">Kordes Lumeneng</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -361,102 +398,6 @@
                                 <li><span class="flaticon-king-size"></span>3</li>
                                 <li><span class="flaticon-sun-umbrella"></span>Near Beach</li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-
-    {{-- <section class="ftco-section testimony-section bg-bottom" style="background-image: url(assets/user/images/bg_3.jpg);">
-        <div class="container">
-            <div class="row justify-content-center pb-4">
-                <div class="col-md-7 text-center heading-section ftco-animate">
-                    <h2 class="mb-4">Tourist Feedback</h2>
-                </div>
-            </div>
-            <div class="row ftco-animate">
-                <div class="col-md-12">
-                    <div class="carousel-testimony owl-carousel ftco-owl">
-                        <div class="item">
-                            <div class="testimony-wrap py-4">
-                                <div class="text">
-                                    <p class="mb-4">Far far away, behind the word mountains, far from the countries
-                                        Vokalia and Consonantia, there live the blind texts.</p>
-                                    <div class="d-flex align-items-center">
-                                        <div class="user-img"
-                                            style="background-image: url(assets/user/images/person_1.jpg)"></div>
-                                        <div class="pl-3">
-                                            <p class="name">Roger Scott</p>
-                                            <span class="position">Marketing Manager</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimony-wrap py-4">
-                                <div class="text">
-                                    <p class="mb-4">Far far away, behind the word mountains, far from the countries
-                                        Vokalia and Consonantia, there live the blind texts.</p>
-                                    <div class="d-flex align-items-center">
-                                        <div class="user-img"
-                                            style="background-image: url(assets/user/images/person_2.jpg)"></div>
-                                        <div class="pl-3">
-                                            <p class="name">Roger Scott</p>
-                                            <span class="position">Marketing Manager</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimony-wrap py-4">
-                                <div class="text">
-                                    <p class="mb-4">Far far away, behind the word mountains, far from the countries
-                                        Vokalia and Consonantia, there live the blind texts.</p>
-                                    <div class="d-flex align-items-center">
-                                        <div class="user-img"
-                                            style="background-image: url(assets/user/images/person_3.jpg)"></div>
-                                        <div class="pl-3">
-                                            <p class="name">Roger Scott</p>
-                                            <span class="position">Marketing Manager</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimony-wrap py-4">
-                                <div class="text">
-                                    <p class="mb-4">Far far away, behind the word mountains, far from the countries
-                                        Vokalia and Consonantia, there live the blind texts.</p>
-                                    <div class="d-flex align-items-center">
-                                        <div class="user-img"
-                                            style="background-image: url(assets/user/images/person_1.jpg)"></div>
-                                        <div class="pl-3">
-                                            <p class="name">Roger Scott</p>
-                                            <span class="position">Marketing Manager</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimony-wrap py-4">
-                                <div class="text">
-                                    <p class="mb-4">Far far away, behind the word mountains, far from the countries
-                                        Vokalia and Consonantia, there live the blind texts.</p>
-                                    <div class="d-flex align-items-center">
-                                        <div class="user-img"
-                                            style="background-image: url(assets/user/images/person_2.jpg)"></div>
-                                        <div class="pl-3">
-                                            <p class="name">Roger Scott</p>
-                                            <span class="position">Marketing Manager</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

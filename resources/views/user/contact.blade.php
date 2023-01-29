@@ -1,15 +1,15 @@
 @extends('layouts.main_user')
 @section('content')
-    <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bg_1.jpg');"
+    <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('assets/user/images/bg_1.jpg');"
         data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
                 <div class="col-md-9 ftco-animate pb-5 text-center">
-                    <h1 class="mb-3 bread">Contact Us</h1>
-                    <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i
-                                    class="ion-ios-arrow-forward"></i></a></span> <span>Contact us <i
-                                class="ion-ios-arrow-forward"></i></span></p>
+                    <h1 class="mb-3 bread">Hubungi Kami!</h1>
+                    <p>
+											Jangan malu-malu
+										</p>
                 </div>
             </div>
         </div>
@@ -18,34 +18,34 @@
     <section class="ftco-section ftco-no-pb contact-section">
         <div class="container">
             <div class="row d-flex contact-info">
-                <div class="col-md-3 d-flex">
+                <div class="col-md-4 d-flex">
                     <div class="align-self-stretch box p-4 text-center">
                         <div class="icon d-flex align-items-center justify-content-center">
                             <span class="icon-map-signs"></span>
                         </div>
-                        <h3 class="mb-2">Address</h3>
-                        <p>198 West 21th Street, Suite 721 New York NY 10016</p>
+                        <h3 class="mb-2">Alamat</h3>
+                        <p>Dusun Karangsari, Desa Lumeneng</p>
                     </div>
                 </div>
-                <div class="col-md-3 d-flex">
+                <div class="col-md-4 d-flex">
                     <div class="align-self-stretch box p-4 text-center">
                         <div class="icon d-flex align-items-center justify-content-center">
                             <span class="icon-phone2"></span>
                         </div>
-                        <h3 class="mb-2">Contact Number</h3>
+                        <h3 class="mb-2">Nomor HP</h3>
                         <p><a href="tel://1234567920">+ 1235 2355 98</a></p>
                     </div>
                 </div>
-                <div class="col-md-3 d-flex">
+                <div class="col-md-4 d-flex">
                     <div class="align-self-stretch box p-4 text-center">
                         <div class="icon d-flex align-items-center justify-content-center">
                             <span class="icon-paper-plane"></span>
                         </div>
-                        <h3 class="mb-2">Email Address</h3>
+                        <h3 class="mb-2">Email</h3>
                         <p><a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
                     </div>
                 </div>
-                <div class="col-md-3 d-flex">
+                {{-- <div class="col-md-3 d-flex">
                     <div class="align-self-stretch box p-4 text-center">
                         <div class="icon d-flex align-items-center justify-content-center">
                             <span class="icon-globe"></span>
@@ -53,12 +53,12 @@
                         <h3 class="mb-2">Website</h3>
                         <p><a href="#">yoursite.com</a></p>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>
 
-    <section class="ftco-section contact-section">
+    {{-- <section class="ftco-section contact-section">
         <div class="container">
             <div class="row block-9">
                 <div class="col-md-6 order-md-last d-flex">
@@ -79,7 +79,6 @@
                             <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
                         </div>
                     </form>
-
                 </div>
 
                 <div class="col-md-6 d-flex">
@@ -87,5 +86,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 @endsection

@@ -18,7 +18,7 @@ return new class extends Migration
 						$table->foreignId('admin_id');
 						$table->string('title');
 						$table->string('slug');
-						$table->string('body');
+						$table->text('body');
             $table->timestamps();
         });
     }

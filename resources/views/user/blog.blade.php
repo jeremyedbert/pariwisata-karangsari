@@ -18,133 +18,30 @@
     <section class="ftco-section">
         <div class="container">
             <div class="row d-flex">
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="blog-entry justify-content-end">
-                        <a href="blog-single.html" class="block-20"
-                            style="background-image: url('assets/user/images/image_1.jpg');">
-                        </a>
-                        <div class="text mt-3 float-right d-block">
-                            <div class="d-flex align-items-center mb-4 topp">
-                                <div class="one">
-                                    <span class="day">21</span>
+                @foreach ($blog as $blog)
+                    <div class="col-md-4 d-flex ftco-animate">
+                        <div class="blog-entry justify-content-end">
+                            <a href="blog-single.html" class="block-20"
+                                style="background-image: url('assets/user/images/image_1.jpg');">
+                            </a>
+                            <div class="text mt-3 float-right d-block">
+                                <div class="d-flex align-items-center mb-4 topp">
+                                    <div class="one">
+                                        <span class="day">{{ $blog->created_at->translatedFormat('d') }}</span>
+                                    </div>
+                                    <div class="two">
+                                        <span class="yr">{{ $blog->created_at->translatedFormat('Y') }}</span>
+                                        <span class="mos">{{ $blog->created_at->translatedFormat('F') }}</span>
+                                    </div>
                                 </div>
-                                <div class="two">
-                                    <span class="yr">2019</span>
-                                    <span class="mos">August</span>
-                                </div>
+                                <h3 class="heading"><a href="#">{{ $blog->title }}</a>
+                                </h3>
+                                <p>{{ substr($blog->body, 0, 80) }}...
+                                </p>
                             </div>
-                            <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
-                            </p>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="blog-entry justify-content-end">
-                        <a href="blog-single.html" class="block-20"
-                            style="background-image: url('assets/user/images/image_2.jpg');">
-                        </a>
-                        <div class="text mt-3 float-right d-block">
-                            <div class="d-flex align-items-center mb-4 topp">
-                                <div class="one">
-                                    <span class="day">21</span>
-                                </div>
-                                <div class="two">
-                                    <span class="yr">2019</span>
-                                    <span class="mos">August</span>
-                                </div>
-                            </div>
-                            <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="blog-entry">
-                        <a href="blog-single.html" class="block-20"
-                            style="background-image: url('assets/user/images/image_3.jpg');">
-                        </a>
-                        <div class="text mt-3 float-right d-block">
-                            <div class="d-flex align-items-center mb-4 topp">
-                                <div class="one">
-                                    <span class="day">21</span>
-                                </div>
-                                <div class="two">
-                                    <span class="yr">2019</span>
-                                    <span class="mos">August</span>
-                                </div>
-                            </div>
-                            <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="blog-entry justify-content-end">
-                        <a href="blog-single.html" class="block-20"
-                            style="background-image: url('assets/user/images/image_4.jpg');">
-                        </a>
-                        <div class="text mt-3 float-right d-block">
-                            <div class="d-flex align-items-center mb-4 topp">
-                                <div class="one">
-                                    <span class="day">21</span>
-                                </div>
-                                <div class="two">
-                                    <span class="yr">2019</span>
-                                    <span class="mos">August</span>
-                                </div>
-                            </div>
-                            <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="blog-entry justify-content-end">
-                        <a href="blog-single.html" class="block-20"
-                            style="background-image: url('assets/user/images/image_5.jpg');">
-                        </a>
-                        <div class="text mt-3 float-right d-block">
-                            <div class="d-flex align-items-center mb-4 topp">
-                                <div class="one">
-                                    <span class="day">21</span>
-                                </div>
-                                <div class="two">
-                                    <span class="yr">2019</span>
-                                    <span class="mos">August</span>
-                                </div>
-                            </div>
-                            <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 d-flex ftco-animate">
-                    <div class="blog-entry">
-                        <a href="blog-single.html" class="block-20"
-                            style="background-image: url('assets/user/images/image_6.jpg');">
-                        </a>
-                        <div class="text mt-3 float-right d-block">
-                            <div class="d-flex align-items-center mb-4 topp">
-                                <div class="one">
-                                    <span class="day">21</span>
-                                </div>
-                                <div class="two">
-                                    <span class="yr">2019</span>
-                                    <span class="mos">August</span>
-                                </div>
-                            </div>
-                            <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
             <div class="row mt-5">
                 <div class="col text-center">

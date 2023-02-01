@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tour;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,7 +14,10 @@ class HomeController extends Controller
 	 */
 	public function index()
 	{
-		return view('user.home');
+		// return dd(Tour::where('id', '=', 1)->get());
+		return view('user.home', [
+			'tour' => Tour::where('id', '=', 1)->get()
+		]);
 	}
 
 	/**

@@ -50,11 +50,11 @@
                                         </tr>
                                         <tr>
                                             <td class="bld">Jam Buka</td>
-                                            <td>Cek</td>
+                                            <td>{{ $tour[0]->open_hour }}</td>
                                         </tr>
                                         <tr>
                                             <td class="bld">Jam Tutup</td>
-                                            <td>Cek</td>
+                                            <td>{{ $tour[0]->close_hour }}</td>
                                         </tr>
                                         <tr>
                                             <td class="bld">Instagram</td>

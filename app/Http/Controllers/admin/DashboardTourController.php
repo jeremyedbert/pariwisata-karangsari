@@ -78,7 +78,7 @@ class DashboardTourController extends Controller
 			'name' => 'required',
 			'description' => 'required',
 			'instagram' => 'required',
-			'contact' => 'required',
+			'contact' => 'required|numeric',
 			'open_hour' => 'required',
 			'close_hour' => 'required',
 			'adult_price' => 'required',
@@ -86,7 +86,16 @@ class DashboardTourController extends Controller
 		];
 
 		// $validatedData['admin_id'] = auth()->user()->id;
-		$validatedData = $request->validate($rules);
+		$validatedData = $request->validate($rules, [
+			'name.required' => 'Nama wajib diisi.',
+			'description.required' => 'Deskripsi wajib diisi.',
+			'instagram' => 'Instagram wajib diisi.',
+			'contact' => 'Kontak wajib diisi.',
+			'open_hour' => 'Jam buka wajib diisi.',
+			'close_hour' => 'Jam tutup wajib diisi.',
+			'adult_price' => 'Harga dewasa wajib diisi.',
+			'child_price' => 'Harga anak wajib diisi.',
+		]);
 
 		Tour::where('id', '=', 1)
 			->update($validatedData);

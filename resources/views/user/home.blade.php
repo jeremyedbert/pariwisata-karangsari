@@ -10,8 +10,8 @@
                     {{-- <a href="" class="icon-video popup-vimeo d-flex align-items-center justify-content-center mb-4">
                         <span class="ion-ios-play"></span>
                     </a> --}}
-                    <p class="caps" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Dusun Karangsari</p>
-                    <h1 data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><b>Desa Lumeneng</b>
+                    <p class="caps" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Desa Lumeneng</p>
+                    <h1 data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><b>{{ $tour[0]->name }}</b>
                     </h1>
                 </div>
             </div>
@@ -99,10 +99,9 @@
         <div class="container">
             <div class="row d-flex">
                 <div class="col-md-6 order-md-last heading-section pl-md-5 ftco-animate">
-                    <h2 class="mb-4">Dusun Karangsari</h2>
-                    <p>Pemandangan indah dibalut dengan dinginnya udara di Dusun Karangsari. Sunrise di pagi dan sunset di
-                        sore hari</p>
-                    <p>Indahnya pemandangan, banyak ...
+                    <h2 class="mb-4">{{ $tour[0]->name }}</h2>
+                    <p>{{ $tour[0]->description }}</p>
+                    <p>{{ substr($tour[0]->description, 0, 100) }}
                     </p>
                     {{-- <p><a href="#" class="btn btn-primary py-3 px-4">Search Destination</a></p> --}}
                 </div>
@@ -154,7 +153,7 @@
         </div>
     </section>
 
-    <section class="ftco-counter img" id="section-counter">
+    {{-- <section class="ftco-counter img" id="section-counter">
         <div class="container">
             <div class="row d-flex">
                 <div class="col-md-6 d-flex">
@@ -197,7 +196,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
 
     <section class="ftco-section testimony-section bg-bottom" style="background-image: url(assets/user/images/bg_3.jpg);">
@@ -243,13 +242,12 @@
                         <div class="item">
                             <div class="testimony-wrap py-4">
                                 <div class="text">
-                                    <p class="mb-4">Far far away, behind the word mountains, far from the countries
-                                        Vokalia and Consonantia, there live the blind texts.</p>
+                                    <p class="mb-4">Gunung kembarnya indah banget.</p>
                                     <div class="d-flex align-items-center">
                                         <div class="user-img" style="background-image: url(assets/user/images/person_3.jpg)"></div>
                                         <div class="pl-3">
-                                            <p class="name">Roger Scott</p>
-                                            <span class="position">Marketing Manager</span>
+                                            <p class="name">Ngab Arifin</p>
+                                            <span class="position">Ngab ngab ngab</span>
                                         </div>
                                     </div>
                                 </div>

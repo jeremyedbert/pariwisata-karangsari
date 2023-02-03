@@ -33,6 +33,11 @@ Route::prefix('/admin')->name('admin.')->group(function () {
 	Route::resource('/dashboard', DashboardController::class)->name('index', 'dashboard');
 	Route::resource('/blog', DashboardBlogController::class)->name('index', 'blog');
 	Route::resource('/gallery', DashboardGalleryController::class)->name('index', 'gallery');
-	Route::resource('/tour', DashboardTourController::class)->name('index', 'tour');
+	Route::resource('/tour', DashboardTourController::class, [
+		'names' => [
+			'index' => 'tour',
+			'edit' => 'tour.edit'
+		]
+	]);
 	Route::resource('/setting', DashboardAdminController::class)->name('index', 'setting');
 });

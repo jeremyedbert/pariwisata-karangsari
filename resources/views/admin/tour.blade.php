@@ -20,9 +20,13 @@
                         @endif
                         <div class="card">
                             <div class="card-header">
-                                <div class="card-head-row">
-                                    <div class="card-tools">
-                                        <a href="{{ route('admin.tour.edit', [$tour[0]->id]) }}" class="btn btn-warning">
+                                <div class="d-flex justify-content-between">
+                                    <div class="row d-flex align-items-center">
+                                        <h3 class="ml-3">Terakhir diupdate pada {{ $tour[0]->updated_at->translatedFormat('d F Y') }}
+																				oleh {{ $tour[0]->admin->name }}</h3>
+                                    </div>
+                                    <div class="row d-flex align-items-center">
+                                        <a href="{{ route('admin.tour.edit', [$tour[0]->id]) }}" class="btn btn-warning mr-3">
                                             <span class="fas fa-pencil-alt"></span>
                                             Edit
                                         </a>

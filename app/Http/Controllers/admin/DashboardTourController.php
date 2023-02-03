@@ -81,20 +81,23 @@ class DashboardTourController extends Controller
 			'contact' => 'required|numeric',
 			'open_hour' => 'required',
 			'close_hour' => 'required',
-			'adult_price' => 'required',
-			'child_price' => 'required',
+			'adult_price' => 'required|numeric',
+			'child_price' => 'required|numeric',
 		];
 
 		// $validatedData['admin_id'] = auth()->user()->id;
 		$validatedData = $request->validate($rules, [
 			'name.required' => 'Nama wajib diisi.',
 			'description.required' => 'Deskripsi wajib diisi.',
-			'instagram' => 'Instagram wajib diisi.',
-			'contact' => 'Kontak wajib diisi.',
-			'open_hour' => 'Jam buka wajib diisi.',
-			'close_hour' => 'Jam tutup wajib diisi.',
-			'adult_price' => 'Harga dewasa wajib diisi.',
-			'child_price' => 'Harga anak wajib diisi.',
+			'instagram.required' => 'Instagram wajib diisi.',
+			'contact.required' => 'Kontak wajib diisi.',
+			'contact.numeric' => 'Isi kontak dengan angka.',
+			'open_hour.required' => 'Jam buka wajib diisi.',
+			'close_hour.required' => 'Jam tutup wajib diisi.',
+			'adult_price.required' => 'Harga dewasa wajib diisi.',
+			'adult_price.numeric' => 'Isi harga dewasa dengan angka.',
+			'child_price.required' => 'Harga anak wajib diisi.',
+			'child_price.numeric' => 'Isi harga anak dengan angka.'
 		]);
 
 		Tour::where('id', '=', 1)

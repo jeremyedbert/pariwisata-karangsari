@@ -1,9 +1,8 @@
-<div class="main-header" data-background-color="purple">
+<div class="main-header" data-background-color="light-blue">
     <!-- Logo Header -->
-    <div class="logo-header">
-
-        <a href="index.html" class="logo">
-            <img src={{ url('assets/admin/img/logoazzara.svg') }} alt="navbar brand" class="navbar-brand">
+    <div class="logo-header justify-content-center">
+        <a href="{{ route('admin.dashboard') }}" class="logo d-flex">
+            <img src={{ url('assets/images/logo_paninggaran.png') }} alt="Logo Paninggaran" class="navbar-brand">
         </a>
         <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -164,23 +163,16 @@
                     </ul>
                 </li> --}}
                 <li class="nav-item dropdown hidden-caret">
-                    <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
-                        <div class="avatar-sm">
-                            <img src={{ url('assets/admin/img/profile.jpg') }} alt="..."
-                                class="avatar-img rounded-circle">
-                        </div>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="fas fa-chevron-down" style="color: white"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user animated fadeIn">
-                        <li>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">My Profile</a>
-                            <a class="dropdown-item" href="#">My Balance</a>
-                            <a class="dropdown-item" href="#">Inbox</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Account Setting</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Logout</a>
-                        </li>
+                        <form action="{{ route('admin.logout') }}" method="post">
+                            <li>
+                                @csrf
+                                <button class="dropdown-item btn-light btn"><b>Logout</b></button>
+                            </li>
+                        </form>
                     </ul>
                 </li>
             </ul>

@@ -1,5 +1,4 @@
 <?php
-use App\Models\Admin;
 
 return [
 
@@ -20,7 +19,7 @@ return [
 	],
 	'admin' => [
 		'driver' => 'eloquent',
-		'model' => Admin::class,
+		'model' =>  \App\Models\Admin::class,
 	],
 
 	/*
@@ -73,15 +72,10 @@ return [
 			'driver' => 'eloquent',
 			'model' => App\Models\User::class,
 		],
-		'admin' => [
+		'admins' => [
 			'driver' => 'eloquent',
 			'model' => App\Models\Admin::class,
 		],
-
-		// 'users' => [
-		//     'driver' => 'database',
-		//     'table' => 'users',
-		// ],
 	],
 
 	/*

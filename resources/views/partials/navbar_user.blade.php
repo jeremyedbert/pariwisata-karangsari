@@ -8,7 +8,7 @@
     <div class="container">
         <a class="navbar-brand" href="{{ route('home') }}">
             <div class="coba">
-                <img src="{{ url('assets/images/lumeneng_logo.png') }}" alt="" style="max-width: 3rem">
+                <img src="{{ url('assets/images/logo_paninggaran.png') }}" alt="" style="max-width: 3rem">
                 <div>
                     Lumeneng
                     <span>Tour</span>

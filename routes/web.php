@@ -9,6 +9,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
@@ -30,14 +31,28 @@ Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::prefix('/admin')->name('admin.')->group(function () {
-	Route::resource('/dashboard', DashboardController::class)->name('index', 'dashboard');
-	Route::resource('/blog', DashboardBlogController::class)->name('index', 'blog');
-	Route::resource('/gallery', DashboardGalleryController::class)->name('index', 'gallery');
-	Route::resource('/tour', DashboardTourController::class, [
-		'names' => [
-			'index' => 'tour',
-			'edit' => 'tour.edit'
-		]
-	]);
-	Route::resource('/setting', DashboardAdminController::class)->name('index', 'setting');
+	// Not Authenticated
+	Route::middleware(['guest:admin', 'preventbackhistory'])->group(
+		function () {
+			Route::get('/login', [LoginController::class, 'index'])->name('login');
+			Route::post('/login', [LoginController::class, 'authenticate'])->name('authenticate');
+		}
+	);
+
+	// Admin
+	Route::middleware(['auth:admin', 'preventbackhistory'])->group(
+		function () {
+			Route::resource('/setting', DashboardAdminController::class)->name('index', 'setting');
+			Route::resource('/dashboard', DashboardController::class)->name('index', 'dashboard');
+			Route::resource('/blog', DashboardBlogController::class)->name('index', 'blog');
+			Route::resource('/gallery', DashboardGalleryController::class)->name('index', 'gallery');
+			Route::resource('/tour', DashboardTourController::class, [
+				'names' => [
+					'index' => 'tour',
+					'edit' => 'tour.edit'
+				]
+			]);
+			Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+		}
+	);
 });

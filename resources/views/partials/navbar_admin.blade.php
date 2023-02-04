@@ -22,7 +22,8 @@
     <!-- Navbar Header -->
     <nav class="navbar navbar-header navbar-expand-lg">
 
-        <div class="container-fluid">
+			<div class="container-fluid">
+					<h4 style="color: white"><b>Anda login sebagai <i>{{ Auth::user()->username }}</i></b></h4>
             <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
                 <li class="nav-item toggle-nav-search hidden-caret">
                     <a class="nav-link" data-toggle="collapse" href="#search-nav" role="button" aria-expanded="false"

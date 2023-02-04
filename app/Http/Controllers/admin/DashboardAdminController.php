@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use App\Models\Admin;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class DashboardAdminController extends Controller
 {
@@ -15,7 +16,9 @@ class DashboardAdminController extends Controller
 	 */
 	public function index()
 	{
-		return view('admin.setting');
+		return view('admin.setting', [
+			'admins' => Admin::all()
+		]);
 	}
 
 	/**
@@ -25,7 +28,7 @@ class DashboardAdminController extends Controller
 	 */
 	public function create()
 	{
-		//
+
 	}
 
 	/**
@@ -58,7 +61,9 @@ class DashboardAdminController extends Controller
 	 */
 	public function edit(Admin $admin)
 	{
-		//
+		return view('admin.edit_admin', [
+			'admin' => $admin
+		]);
 	}
 
 	/**
@@ -70,7 +75,53 @@ class DashboardAdminController extends Controller
 	 */
 	public function update(Request $request, Admin $admin)
 	{
-		//
+		if ($request->password == '') {
+			$rules = [
+				'username' => ['required', Rule::unique('admins', 'username')->ignore($admin->id)],
+				'name' => 'required',
+				'password_admin' => 'required|min:6|max:30|current_password:admin'
+			];
+			$validatedData = $request->validate($rules, [
+				'username.required' => 'Harap mengisi username.',
+				'username.unique' => 'Username sudah dipakai oleh pengguna lain.',
+				'password_admin.min' => 'Password minimal 6 karakter.',
+				'password_admin.max' => 'Password maksimal 30 karakter.',
+				'password_admin.required' => 'Anda wajib mengisi password.',
+				'password_admin.current_password' => 'Password Anda tidak sesuai.'
+			]);
+
+			Admin::where('id', $admin->id)->update([
+				'username' => $request->username,
+				'name' => $request->name
+			]);
+
+		} else {
+			$rules = [
+				'username' => ['required', Rule::unique('admins', 'username')->ignore($admin->id)],
+				'name' => 'required',
+				'password' => 'min:6|max:30',
+				'password_confirm' => 'required|same:password',
+				'password_admin' => 'required|current_password:admin'
+			];
+			$validatedData = $request->validate($rules, [
+				'username.required' => 'Username wajib diisi.',
+				'username.unique' => 'Username sudah dipakai oleh pengguna lain.',
+				'password.min' => 'Password minimal 6 karakter.',
+				'password.max' => 'Password maksimal 30 karakter.',
+				'password_confirm.required' => 'Password konfirmasi wajib diisi.',
+				'password_confirm.same' => 'Password konfirmasi tidak sesuai.',
+				'password_admin.required' => 'Anda wajib mengisi password.',
+				'password_admin.current_password' => 'Password Anda tidak sesuai'
+
+			]);
+
+			Admin::where('id', $admin->id)->update([
+				'username' => $request->username,
+				'name' => $request->name
+			]);
+		}
+
+		return redirect()->route('admin.setting')->with('success', 'Data ' . $admin->username . ' berhasil diubah');
 	}
 
 	/**

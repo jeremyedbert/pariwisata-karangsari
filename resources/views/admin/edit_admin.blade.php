@@ -18,8 +18,8 @@
                                             <div class="form-group form-group-default"
                                                 @error('name') style="border: 1px solid rgb(255, 0, 0)" @enderror>
                                                 <label for="name">Nama <span class="required-label">*</span></label>
-                                                <input type="text" class="form-control" value="{{ $admin->name }}"
-                                                    id="name" name="name">
+                                                <input type="text" class="form-control"
+                                                    value="{{ old('name', $admin->name) }}" id="name" name="name">
                                                 @error('name')
                                                     <small style="color: #dc3545">{{ $message }}</small>
                                                 @enderror
@@ -40,8 +40,9 @@
                                             <div class="form-group form-group-default"
                                                 @error('username') style="border: 1px solid rgb(255, 0, 0)" @enderror>
                                                 <label for="username">Username <span class="required-label">*</span></label>
-                                                <input type="text" class="form-control" value="{{ $admin->username }}"
-                                                    id="username" name="username">
+                                                <input type="text" class="form-control"
+                                                    value="{{ old('username', $admin->username) }}" id="username"
+                                                    name="username">
                                                 @error('username')
                                                     <small style="color: #dc3545">{{ $message }}</small>
                                                 @enderror

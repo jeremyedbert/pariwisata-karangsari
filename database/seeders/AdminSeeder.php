@@ -25,5 +25,10 @@ class AdminSeeder extends Seeder
 			'name' => 'Pak Carik',
 			'password' => bcrypt('pakcarik')
 		]);
+		Admin::create([
+			'username' => 'adminadmin',
+			'name' => 'Admin',
+			'password' => bcrypt('adminadmin')
+		]);
 	}
 }

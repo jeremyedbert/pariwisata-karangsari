@@ -42,14 +42,18 @@ Route::prefix('/admin')->name('admin.')->group(function () {
 	// Admin
 	Route::middleware(['auth:admin', 'preventbackhistory'])->group(
 		function () {
-			Route::resource('/setting', DashboardAdminController::class)->name('index', 'setting');
+			Route::resource('/setting', DashboardAdminController::class, ['parameters' => ['setting' => 'admin']])->names([
+				'index' => 'setting',
+				'edit' => 'setting.edit',
+				'create' => 'setting.create'
+			]);
 			Route::resource('/dashboard', DashboardController::class)->name('index', 'dashboard');
 			Route::resource('/blog', DashboardBlogController::class)->name('index', 'blog');
 			Route::resource('/gallery', DashboardGalleryController::class)->name('index', 'gallery');
 			Route::resource('/tour', DashboardTourController::class, [
 				'names' => [
 					'index' => 'tour',
-					'edit' => 'tour.edit'
+					'edit' => 'tour.edit',
 				]
 			]);
 			Route::post('/logout', [LoginController::class, 'logout'])->name('logout');

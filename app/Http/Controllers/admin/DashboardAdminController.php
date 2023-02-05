@@ -39,8 +39,9 @@ class DashboardAdminController extends Controller
 	 */
 	public function store(Request $request)
 	{
+		$username = str_replace(' ', '', $request->username);
 		$rules = [
-			'username' => ['required', Rule::unique('admins', 'username')],
+			'username' => ['required', Rule::unique('admins', 'username'), 'lowercase'],
 			'name' => 'required',
 			'password' => 'required|min:6|max:30',
 			'password_confirm' => 'required|same:password',
@@ -49,6 +50,7 @@ class DashboardAdminController extends Controller
 		$validatedData = $request->validate($rules, [
 			'username.required' => 'Username wajib diisi.',
 			'username.unique' => 'Username sudah dipakai oleh pengguna lain.',
+			'username.lowercase' => 'Username harus menggunakan huruf kecil.',
 			'name.required' => 'Nama wajib diisi.',
 			'password.required' => 'Password wajib diisi.',
 			'password.min' => 'Password minimal 6 karakter.',
@@ -59,8 +61,16 @@ class DashboardAdminController extends Controller
 			'password_admin.current_password' => 'Password Anda tidak sesuai'
 		]);
 
-		Admin::create($validatedData);
-		return redirect()->route('admin.setting')->with('success', 'Admin berhasil ditambahkan');
+		$admin = new Admin();
+		$admin->name = $request->name;
+		$admin->username = $username;
+		$admin->password = bcrypt($request->password);
+
+		$storeAdmin = $admin->save();
+
+		if ($storeAdmin) {
+			return redirect()->route('admin.setting')->with('success', 'Admin berhasil ditambahkan');
+		}
 	}
 
 	/**
@@ -96,15 +106,17 @@ class DashboardAdminController extends Controller
 	 */
 	public function update(Request $request, Admin $admin)
 	{
+		$username = str_replace(' ', '', $request->username);
 		if ($request->password == '') {
 			$rules = [
-				'username' => ['required', Rule::unique('admins', 'username')->ignore($admin->id)],
+				'username' => ['required', Rule::unique('admins', 'username')->ignore($admin->id), 'lowercase'],
 				'name' => 'required',
 				'password_admin' => 'required|min:6|max:30|current_password:admin'
 			];
 			$validatedData = $request->validate($rules, [
 				'username.required' => 'Harap mengisi username.',
 				'username.unique' => 'Username sudah dipakai oleh pengguna lain.',
+				'username.lowercase' => 'Username harus menggunakan huruf kecil.',
 				'name.required' => 'Nama wajib diisi.',
 				'password_admin.min' => 'Password minimal 6 karakter.',
 				'password_admin.max' => 'Password maksimal 30 karakter.',
@@ -113,13 +125,13 @@ class DashboardAdminController extends Controller
 			]);
 
 			Admin::where('id', $admin->id)->update([
-				'username' => $request->username,
+				'username' => $username,
 				'name' => $request->name
 			]);
 
 		} else {
 			$rules = [
-				'username' => ['required', Rule::unique('admins', 'username')->ignore($admin->id)],
+				'username' => ['required', Rule::unique('admins', 'username')->ignore($admin->id), 'lowercase'],
 				'name' => 'required',
 				'password' => 'min:6|max:30',
 				'password_confirm' => 'required|same:password',
@@ -128,6 +140,7 @@ class DashboardAdminController extends Controller
 			$validatedData = $request->validate($rules, [
 				'username.required' => 'Username wajib diisi.',
 				'username.unique' => 'Username sudah dipakai oleh pengguna lain.',
+				'username.lowercase' => 'Username harus menggunakan huruf kecil.',
 				'name.required' => 'Nama wajib diisi.',
 				'password.min' => 'Password minimal 6 karakter.',
 				'password.max' => 'Password maksimal 30 karakter.',
@@ -138,7 +151,7 @@ class DashboardAdminController extends Controller
 			]);
 
 			Admin::where('id', $admin->id)->update([
-				'username' => $request->username,
+				'username' => $username,
 				'name' => $request->name
 			]);
 		}

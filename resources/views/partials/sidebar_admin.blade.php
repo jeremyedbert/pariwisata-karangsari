@@ -44,10 +44,10 @@
                         <p>Halaman Utama</p>
                     </a>
                 </li>
-                <li class="nav-item {{ Request::is('admin/blog*') ? 'active' : '' }}">
-                    <a href="{{ route('admin.blog') }}">
-                        <i class="fas fa-pencil-alt"></i>
-                        <p>Blog</p>
+                <li class="nav-item {{ Request::is('admin/gallery*') ? 'active' : '' }}">
+                    <a href="{{ route('admin.gallery') }}">
+                        <i class="fas fa-images"></i>
+                        <p>Galeri</p>
                     </a>
                 </li>
                 <li class="nav-item {{ Request::is('admin/tour*') ? 'active' : '' }}">

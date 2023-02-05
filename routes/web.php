@@ -27,7 +27,7 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 // Auth::routes();
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+// Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::prefix('/admin')->name('admin.')->group(function () {
@@ -48,7 +48,6 @@ Route::prefix('/admin')->name('admin.')->group(function () {
 				'create' => 'setting.create'
 			]);
 			Route::resource('/dashboard', DashboardController::class)->name('index', 'dashboard');
-			Route::resource('/blog', DashboardBlogController::class)->name('index', 'blog');
 			Route::resource('/gallery', DashboardGalleryController::class)->name('index', 'gallery');
 			Route::resource('/tour', DashboardTourController::class, [
 				'names' => [

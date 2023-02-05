@@ -44,7 +44,8 @@ Route::prefix('/admin')->name('admin.')->group(function () {
 		function () {
 			Route::resource('/setting', DashboardAdminController::class, ['parameters' => ['setting' => 'admin']])->names([
 				'index' => 'setting',
-				'edit' => 'setting.edit'
+				'edit' => 'setting.edit',
+				'create' => 'setting.create'
 			]);
 			Route::resource('/dashboard', DashboardController::class)->name('index', 'dashboard');
 			Route::resource('/blog', DashboardBlogController::class)->name('index', 'blog');

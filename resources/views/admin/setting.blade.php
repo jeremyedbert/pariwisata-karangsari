@@ -3,8 +3,9 @@
     <div class="main-panel">
         <div class="content">
             <div class="page-inner">
-                <div class="page-header">
+                <div class="page-header d-flex justify-content-between">
                     <h1 class="pb-3"><b>Daftar Pengguna</b></h1>
+										<a href="{{ route('admin.setting.create') }}" class="btn btn-warning">Tambah admin</a>
                 </div>
                 <div class="row">
                     <div class="col-md-12">

@@ -4,13 +4,12 @@
         <div class="content">
             <div class="page-inner">
                 <div class="page-header">
-                    <h1 class="pb-3"><b>Edit Pengguna</b></h1>
+                    <h1 class="pb-3"><b>Tambah Pengguna</b></h1>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card">
-                            <form action="{{ route('admin.setting.update', $admin->id) }}" method="post">
-                                @method('put')
+                            <form action="{{ route('admin.setting.store') }}" method="post">
                                 @csrf
                                 <div class="card-body" style="border-bottom: 1px solid #f3f3f3">
                                     <div class="row">
@@ -19,18 +18,16 @@
                                                 @error('name') style="border: 1px solid rgb(255, 0, 0)" @enderror>
                                                 <label for="name">Nama <span class="required-label">*</span></label>
                                                 <input type="text" class="form-control"
-                                                    value="{{ old('name', $admin->name) }}" id="name" name="name">
+                                                    value="{{ old('name') }}" id="name" name="name">
                                                 @error('name')
                                                     <small style="color: #dc3545">{{ $message }}</small>
                                                 @enderror
                                             </div>
                                             <div class="form-group form-group-default"
                                                 @error('password') style="border: 1px solid rgb(255, 0, 0)" @enderror>
-                                                <label for="password">Password</label>
+                                                <label for="password">Password <span class="required-label">*</span></label>
                                                 <input type="password" class="form-control" value="" id="password"
                                                     name="password">
-                                                <small class="form-text text-muted">Isi jika ingin melakukan perubahan
-                                                    password.</small>
                                                 @error('password')
                                                     <small style="color: #dc3545">{{ $message }}</small>
                                                 @enderror
@@ -41,7 +38,7 @@
                                                 @error('username') style="border: 1px solid rgb(255, 0, 0)" @enderror>
                                                 <label for="username">Username <span class="required-label">*</span></label>
                                                 <input type="text" class="form-control"
-                                                    value="{{ old('username', $admin->username) }}" id="username"
+                                                    value="{{ old('username') }}" id="username"
                                                     name="username">
                                                 @error('username')
                                                     <small style="color: #dc3545">{{ $message }}</small>
@@ -49,11 +46,9 @@
                                             </div>
                                             <div class="form-group form-group-default"
                                                 @error('password_confirm') style="border: 1px solid rgb(255, 0, 0)" @enderror>
-                                                <label for="password_confirm">Konfirmasi Password</label>
+                                                <label for="password_confirm">Konfirmasi Password <span class="required-label">*</span></label>
                                                 <input type="password" class="form-control" value=""
                                                     id="password_confirm" name="password_confirm">
-                                                <small class="form-text text-muted">Isi jika ingin melakukan perubahan
-                                                    password.</small>
                                                 @error('password_confirm')
                                                     <small style="color: #dc3545">{{ $message }}</small>
                                                 @enderror

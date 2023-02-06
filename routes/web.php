@@ -48,13 +48,18 @@ Route::prefix('/admin')->name('admin.')->group(function () {
 				'create' => 'setting.create'
 			]);
 			Route::resource('/dashboard', DashboardController::class)->name('index', 'dashboard');
-			Route::resource('/gallery', DashboardGalleryController::class)->name('index', 'gallery');
+			Route::resource('/gallery', DashboardGalleryController::class)->names([
+				'index' => 'gallery',
+				'edit' => 'gallery.edit',
+				'create' => 'gallery.create',
+			]);
 			Route::resource('/tour', DashboardTourController::class, [
 				'names' => [
 					'index' => 'tour',
 					'edit' => 'tour.edit',
 				]
 			]);
+			// Route::post('/gallery/upload', [DashboardGalleryController::class, 'upload'])->name('gallery.upload');
 			Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 		}
 	);

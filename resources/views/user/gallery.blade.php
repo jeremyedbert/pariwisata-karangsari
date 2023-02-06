@@ -18,21 +18,22 @@
     <section class="ftco-section">
         <div class="container">
             <div class="row d-flex">
-                @for ($i = 1; $i <= 6; $i++)
+							{{-- Looping --}}
+                @foreach ($galleries as $photo)
                     <div class="col-md-3 d-flex ftco-animate">
                         <div class="blog-entry w-100 justify-content-end">
-                            <a href="#" class="block-20" data-toggle="modal" data-target="#modal{{ $i }}"
-                                style="background-image: url('assets/user/images/img_{{ $i }}.jpg');">
+                            <a href="#" class="block-20" data-toggle="modal" data-target="#modal{{ $photo->id }}"
+                                style="background-image: url('assets/user/{{ $photo->photo }}');">
                             </a>
                             <div class="text mt-3 float-right w-100">
-                                <p>Dari {{ $i }}
+                                <p>{{ $photo->caption }}
                                 </p>
                             </div>
                         </div>
                     </div>
 
                     {{-- Modal --}}
-                    <div class="modal fade" id="modal{{ $i }}" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal fade" id="modal{{ $photo->id }}" tabindex="-1" role="dialog" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -41,14 +42,14 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <img src="{{ url('assets/user/images/img_' . $i . '.jpg') }}" alt=""
+                                    <img src="{{ url('assets/user/' . $photo->photo) }}" alt=""
                                         style="height: 620px;">
                                 </div>
                             </div>
                         </div>
                     </div>
                     {{-- End of Modal --}}
-                @endfor
+                @endforeach
             </div>
             <div class="row mt-5">
                 <div class="col text-center">

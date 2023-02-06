@@ -27,7 +27,7 @@ class DashboardGalleryController extends Controller
 	 */
 	public function create()
 	{
-		//
+		return view('admin.add_photo');
 	}
 
 	/**
@@ -38,7 +38,25 @@ class DashboardGalleryController extends Controller
 	 */
 	public function store(Request $request)
 	{
-		//
+		// return $request->file('photo')->store('photo');
+		$rules = [
+			'caption' => 'required',
+			'photo' => 'required|image|file|max:10240'
+		];
+		$validatedData = $request->validate($rules, [
+			'caption.required' => 'Caption wajib diisi.',
+			'photo.required' => 'Anda wajib mengunggah foto.',
+			'photo.image' => 'File harus berupa gambar (.jpg, .png, .jpeg, dll).',
+			'photo.max' => 'Ukuran maksimal 10 MB'
+		]);
+
+		$validatedData['admin_id'] = auth()->user()->id;
+		$file = $request->file('photo');
+		$filename = preg_replace('/[^A-Za-z0-9().\-]/', '_', $file->getClientOriginalName());
+		$validatedData['photo'] = $request->file('photo')->storeAs('gallery', date('dmY_His') . '_' . $filename);
+		Gallery::create($validatedData);
+
+		return redirect()->route('admin.gallery')->with('success', 'Foto berhasil ditambahkan!');
 	}
 
 	/**
@@ -85,4 +103,17 @@ class DashboardGalleryController extends Controller
 	{
 		//
 	}
+
+// public function upload(Request $request)
+// {
+// 	if($request->hasFile('photo')) {
+// 		$file = $request->file('photo');
+// 		$filename = $file->getClientOriginalName();
+// 		$folder = uniqid() . '-' . now()->timestamp;
+// 		$file->storeAs('photo/tmp/'. $filename);
+
+// 		return $folder;
+// 	}
+// 	return '';
+// }
 }

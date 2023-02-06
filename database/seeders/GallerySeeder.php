@@ -17,32 +17,32 @@ class GallerySeeder extends Seeder
 	{
 		Gallery::create([
 			'admin_id' => '1',
-			'photo' => 'images/img1.jpg',
+			'photo' => 'gallery/img_1.jpg',
 			'caption' => 'Perangkat Desa menyampaikan Situasi Terkini Desa Lumeneng'
 		]);
 		Gallery::create([
 			'admin_id' => '2',
-			'photo' => 'images/img2.jpg',
+			'photo' => 'gallery/img_2.jpg',
 			'caption' => 'Proker Bodong Ilhamy: Menyampaikan Sosialisasi Budaya Kuntul'
 		]);
 		Gallery::create([
 			'admin_id' => '1',
-			'photo' => 'images/img3.jpg',
+			'photo' => 'gallery/img_3.jpg',
 			'caption' => 'Balai Desa Lumeneng'
 		]);
 		Gallery::create([
 			'admin_id' => '1',
-			'photo' => 'images/img4.jpg',
+			'photo' => 'gallery/img_4.jpg',
 			'caption' => 'Berkunjung ke Salah Satu Rumah Warga'
 		]);
 		Gallery::create([
 			'admin_id' => '2',
-			'photo' => 'images/img5.jpg',
+			'photo' => 'gallery/img_5.jpg',
 			'caption' => 'Gunung Kembar di Sumingkir'
 		]);
 		Gallery::create([
 			'admin_id' => '3',
-			'photo' => 'images/img6.jpg',
+			'photo' => 'gallery/img_6.jpg',
 			'caption' => 'Pemandangan Dusun Karangsari'
 		]);
 	}

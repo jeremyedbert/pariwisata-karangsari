@@ -5,10 +5,15 @@
             <div class="page-inner">
                 <div class="page-header d-flex justify-content-between">
                     <h1 class="pb-3"><b>Daftar Pengguna</b></h1>
-										<a href="{{ route('admin.setting.create') }}" class="btn btn-warning">Tambah admin</a>
+                    <a href="{{ route('admin.setting.create') }}" class="btn btn-warning">Tambah admin</a>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
+                        @if (session('success'))
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                {!! session('success') !!}
+                            </div>
+                        @endif
                         <div class="card">
                             <div class="card-body">
                                 <div class="table-responsive">

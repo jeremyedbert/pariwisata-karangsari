@@ -15,7 +15,7 @@
                                     <table id="basic-datatables" class="display table table-striped table-hover">
                                         <thead>
                                             <tr>
-                                                <th>Judul</th>
+                                                <th>Caption</th>
 																								<th>Ditambahkan oleh</th>
 																								<th>Ditambahkan pada</th>
                                                 <th>Foto</th>
@@ -28,9 +28,9 @@
                                                     <td>{{ $photo->caption }}</td>
 																										<td>{{ $photo->admin->name }}</td>
 																										<td>{{ $photo->created_at->translatedFormat('d F Y') }}</td>
-                                                    <td><img src="{{ asset('storage/' . $photo->photo) }}" alt="" border=3 height=280></img></td>
+                                                    <td><img src="{{ asset('storage/' . $photo->photo) }}" alt="{{ $photo->caption }}" height=280></img></td>
                                                     <td>
-                                                        <a href="#" class="btn btn-info btn-sm my-2 mx-2"><span><i
+                                                        <a href="{{ route('admin.gallery.edit', $photo->id) }}" class="btn btn-info btn-sm my-2 mx-2"><span><i
                                                                     class="fas fa-eye"></i></span> Edit</a>
                                                     </td>
                                                 </tr>

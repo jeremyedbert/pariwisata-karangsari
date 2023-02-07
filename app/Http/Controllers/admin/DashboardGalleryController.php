@@ -78,7 +78,9 @@ class DashboardGalleryController extends Controller
 	 */
 	public function edit(Gallery $gallery)
 	{
-		//
+		return view('admin.edit_photo', [
+			'photo' => $gallery
+		]);
 	}
 
 	/**
@@ -90,7 +92,18 @@ class DashboardGalleryController extends Controller
 	 */
 	public function update(Request $request, Gallery $gallery)
 	{
-		//
+		$rules = [
+			'caption' => 'required'
+		];
+
+		$validatedData = $request->validate($rules, [
+			'caption.required' => 'Caption wajib diisi.'
+		]);
+
+		Gallery::where('id', $gallery->id)
+			->update($validatedData);
+
+		return redirect()->route('admin.gallery')->with('success', 'Caption berhasil diubah');
 	}
 
 	/**

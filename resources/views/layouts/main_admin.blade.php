@@ -8,6 +8,7 @@
             cursor: pointer;
         }
     </style> --}}
+    <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
 </head>
 
 <body onload="initialize()">
@@ -56,6 +57,9 @@
 
     <!-- Azzara JS -->
     <script src={{ url('assets/admin/js/ready.min.js') }}></script>
+
+    <!-- Filepond -->
+    <script src="https://unpkg.com/filepond@^4/dist/filepond.js"></script>
 
     <div class="wrapper">
         <!--

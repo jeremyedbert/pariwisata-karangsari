@@ -10,7 +10,8 @@ class Gallery extends Model
 	use HasFactory;
 	protected $fillable = [
 		'photo',
-		'caption'
+		'caption',
+		'admin_id'
 	];
 
 	public function admin() {

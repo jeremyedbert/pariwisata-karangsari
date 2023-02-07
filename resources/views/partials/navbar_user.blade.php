@@ -22,13 +22,14 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item {{ Request::is('/') ? 'active' : (Request::is('admin*') ? 'active' : '') }}"><a href="{{ route('home') }}"
+                <li class="nav-item active"><a href="{{ route('home') }}"
                         class="nav-link"><b>Halaman Utama</b></a></li>
-                <li class="nav-item {{ Request::is('blog') ? 'active' : (Request::is('admin*') ? 'active' : '') }}"><a href="{{ route('blog') }}"
-                        class="nav-link"><b>Blog</a></b></li>
-                <li class="nav-item {{ Request::is('gallery') ? 'active' : (Request::is('admin*') ? 'active' : '') }}"><a href="{{ route('gallery') }}"
+                {{-- <li class="nav-item {{ Request::is('blog') ? 'active' : (Request::is('admin*') ? 'active' : '') }}"><a href="{{ route('blog') }}"
+                        class="nav-link"><b>Blog</a></b></li> --}}
+                <li class="nav-item {{ Request::is('/') ? '' : 'active' }}"><a href="{{ route('gallery') }}"
                         class="nav-link"><b>Galeri</b></a></li>
-                <li class="nav-item cta"><a href="{{ route('contact') }}" class="nav-link"><b>Kontak</b></a></li>
+                <li class="nav-item {{ Request::is('/') ? '' : 'active' }}"><a href="{{ route('contact') }}"
+                        class="nav-link"><b>Kontak</b></a></li>
             </ul>
         </div>
     </div>

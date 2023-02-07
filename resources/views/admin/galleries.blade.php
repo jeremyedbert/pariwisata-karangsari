@@ -54,7 +54,7 @@
                                                         <div class="modal-content">
                                                             <div class="modal-header">
                                                                 <h2 class="modal-title" id="exampleModalLongTitle">
-                                                                    Konfirmasi Penerimaan</h2>
+                                                                    Hapus?</h2>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
@@ -62,10 +62,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                                 <div>
-                                                                    <h4><b>Terima pendaftaran ini? </b></h4>
-                                                                    <a
-                                                                        href="{{ route('admin.gallery.destroy', $photo->id) }}">Cek
-                                                                        kembali detail</a>
+                                                                    <h4><b>Foto yang sudah Anda hapus tidak bisa dikebalikan lagi</b></h4>
                                                                 </div>
                                                             </div>
                                                             <div class="modal-footer">
@@ -76,7 +73,8 @@
                                                                     method="post" class="d-inline">
                                                                     @method('delete')
                                                                     @csrf
-                                                                    <button class="btn btn-success btn-sm">Delete</button>
+                                                                    <button class="btn btn-danger btn-sm"><span><i
+																																			class="fas fa-trash"></i></span> Delete</button>
                                                                 </form>
                                                             </div>
                                                         </div>

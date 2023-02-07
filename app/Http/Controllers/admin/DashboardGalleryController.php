@@ -42,13 +42,13 @@ class DashboardGalleryController extends Controller
 		// return $request->file('photo')->store('photo');
 		$rules = [
 			'caption' => 'required',
-			'photo' => 'required|image|file|max:10240'
+			'photo' => 'required|image|file|max:8192'
 		];
 		$validatedData = $request->validate($rules, [
 			'caption.required' => 'Caption wajib diisi.',
 			'photo.required' => 'Anda wajib mengunggah foto.',
 			'photo.image' => 'File harus berupa gambar (.jpg, .png, .jpeg, dll).',
-			'photo.max' => 'Ukuran maksimal 10 MB'
+			'photo.max' => 'Ukuran maksimal 8 MB'
 		]);
 
 		$validatedData['admin_id'] = auth()->user()->id;

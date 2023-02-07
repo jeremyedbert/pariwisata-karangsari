@@ -156,7 +156,7 @@ class DashboardAdminController extends Controller
 			]);
 		}
 
-		return redirect()->route('admin.setting')->with('success', 'Data ' . $admin->username . ' berhasil diubah');
+		return redirect()->route('admin.setting')->with('success', 'Data <i>' . $admin->username . '</i> berhasil diubah');
 	}
 
 	/**

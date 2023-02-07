@@ -24,9 +24,6 @@
                 <div class="col-md-6 order-md-last heading-section pl-md-5 ftco-animate">
                     <h2 class="mb-4">{{ $tour[0]->name }}</h2>
                     <p>{{ $tour[0]->description }}</p>
-                    <p>{{ substr($tour[0]->description, 0, 100) }}
-                    </p>
-                    {{-- <p><a href="#" class="btn btn-primary py-3 px-4">Search Destination</a></p> --}}
                 </div>
                 <div class="col-md-6">
                     <div class="row">
@@ -35,7 +32,7 @@
                                 <div class="icon"><span class="flaticon-paragliding"></span></div>
                                 <div class="media-body">
                                     <h3 class="heading mb-3">Aktivitas</h3>
-                                    <p>Tempat yang cocok untuk camping dan melihat sunset
+                                    <p>Tempat yang cocok untuk camping dan melihat sunrise dan sunset
                                     </p>
                                 </div>
                             </div>
@@ -54,9 +51,9 @@
                             <div class="media block-6 services d-block">
                                 <div class="icon"><span class="flaticon-tour-guide"></span></div>
                                 <div class="media-body">
-                                    <h3 class="heading mb-3">Private Guide</h3>
-                                    <p>A small river named Duden flows by their place and supplies it with the necessary
-                                    </p>
+                                    <h3 class="heading mb-3">Waktu</h3>
+                                    <p class="mb-0">Jam Buka: {{ $tour[0]->open_hour }}</p>
+                                    <p>Jam Tutup: {{ $tour[0]->close_hour }}</p>
                                 </div>
                             </div>
                         </div>
@@ -135,13 +132,13 @@
                         <div class="item">
                             <div class="testimony-wrap py-4">
                                 <div class="text">
-                                    <p class="mb-4">Far far away, behind the word mountains, far from the countries
-                                        Vokalia and Consonantia, there live the blind texts.</p>
+                                    <p class="mb-4">Tumbuh &#127793;</p>
                                     <div class="d-flex align-items-center">
-                                        <div class="user-img" style="background-image: url(assets/user/images/person_1.jpg)"></div>
+                                        <div class="user-img"
+                                            style="background-image: url(assets/user/images/person_1.jpg)"></div>
                                         <div class="pl-3">
-                                            <p class="name">Pak Carik</p>
-                                            <span class="position">Marketing Manager</span>
+                                            <p class="name">Mas Faqih</p>
+                                            <span class="position">Founder Manasuka</span>
                                         </div>
                                     </div>
                                 </div>
@@ -153,10 +150,11 @@
                                     <p class="mb-4">Far far away, behind the word mountains, far from the countries
                                         Vokalia and Consonantia, there live the blind texts.</p>
                                     <div class="d-flex align-items-center">
-                                        <div class="user-img" style="background-image: url(assets/user/images/person_2.jpg)"></div>
+                                        <div class="user-img"
+                                            style="background-image: url(assets/user/images/person_2.jpg)"></div>
                                         <div class="pl-3">
                                             <p class="name">Bu Novi</p>
-                                            <span class="position">Marketing Manager</span>
+                                            <span class="position">Perangkat Desa</span>
                                         </div>
                                     </div>
                                 </div>
@@ -167,7 +165,8 @@
                                 <div class="text">
                                     <p class="mb-4">Gunung kembarnya indah banget.</p>
                                     <div class="d-flex align-items-center">
-                                        <div class="user-img" style="background-image: url(assets/user/images/person_3.jpg)"></div>
+                                        <div class="user-img"
+                                            style="background-image: url(assets/user/images/person_3.jpg)"></div>
                                         <div class="pl-3">
                                             <p class="name">Ngab Arifin</p>
                                             <span class="position">Ngab ngab ngab</span>
@@ -179,10 +178,10 @@
                         <div class="item">
                             <div class="testimony-wrap py-4">
                                 <div class="text">
-                                    <p class="mb-4">Far far away, behind the word mountains, far from the countries
-                                        Vokalia and Consonantia, there live the blind texts.</p>
+                                    <p class="mb-4">cara bicaramu tdk melambangkan seorang muslim sjati</p>
                                     <div class="d-flex align-items-center">
-                                        <div class="user-img" style="background-image: url(assets/user/images/person_1.jpg)"></div>
+                                        <div class="user-img"
+                                            style="background-image: url(assets/user/images/person_1.jpg)"></div>
                                         <div class="pl-3">
                                             <p class="name">Willy The Kid</p>
                                             <span class="position">Buzzer SJW</span>
@@ -196,7 +195,8 @@
                                 <div class="text">
                                     <p class="mb-4">Sangat menyenangkan.</p>
                                     <div class="d-flex align-items-center">
-                                        <div class="user-img" style="background-image: url(assets/user/images/rama.png)"></div>
+                                        <div class="user-img" style="background-image: url(assets/user/images/rama.png)">
+                                        </div>
                                         <div class="pl-3">
                                             <p class="name">Rama</p>
                                             <span class="position">Kordes Lumeneng</span>

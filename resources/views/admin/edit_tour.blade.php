@@ -32,8 +32,7 @@
                                                 @error('description') style="border: 1px solid rgb(255, 0, 0)" @enderror>
                                                 <label for="description">Deskripsi <span
                                                         class="required-label">*</span></label>
-                                                <input type="text" class="form-control"
-                                                    value="{{ $tour[0]->description }}" name="description">
+                                                <textarea rows="6" class="form-control" name="description">{{ $tour[0]->description }}</textarea>
                                                 <span class="text-danger">
                                                     @error('description')
                                                         {{ $message }}

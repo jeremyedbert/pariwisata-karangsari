@@ -54,7 +54,7 @@
                                                         <div class="modal-content">
                                                             <div class="modal-header">
                                                                 <h2 class="modal-title" id="exampleModalLongTitle">
-                                                                    Hapus?</h2>
+                                                                    Hapus Foto <i>"{{ $photo->caption }}"</i> ?</h2>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
@@ -62,7 +62,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                                 <div>
-                                                                    <h4><b>Foto yang sudah Anda hapus tidak bisa dikebalikan lagi</b></h4>
+                                                                    <h4><b>Foto yang sudah Anda hapus tidak bisa dikembalikan lagi</b></h4>
                                                                 </div>
                                                             </div>
                                                             <div class="modal-footer">

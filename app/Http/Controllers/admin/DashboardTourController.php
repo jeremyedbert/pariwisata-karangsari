@@ -100,6 +100,8 @@ class DashboardTourController extends Controller
 			'child_price.numeric' => 'Isi harga anak dengan angka.'
 		]);
 
+		$validatedData['admin_id'] = auth()->user()->id;
+
 		Tour::where('id', '=', 1)
 			->update($validatedData);
 

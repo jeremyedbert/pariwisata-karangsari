@@ -1,6 +1,6 @@
 @extends('layouts.main_user')
 @section('content')
-    <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('assets/user/images/bg_1.jpg');"
+    {{-- <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('assets/user/images/bg_1.jpg');"
         data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
@@ -13,14 +13,15 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <section class="ftco-section">
         <div class="container">
+            <h2 style="font-weight:600" class="mb-3 bread">Galeri</h2>
             <div class="row d-flex">
                 {{-- Looping --}}
                 @foreach ($galleries as $photo)
-                    <div class="col-md-3 d-flex ftco-animate">
+                    <div class="col-lg-4 d-flex ftco-animate">
                         <div class="blog-entry w-100 justify-content-end">
                             <a href="#" class="block-20" data-toggle="modal" data-target="#modal{{ $photo->id }}"
                                 style="background-image: url('storage/{{ $photo->photo }}');">
@@ -33,7 +34,8 @@
                     </div>
 
                     {{-- Modal --}}
-                    <div class="modal fade bd-example-modal-lg" id="modal{{ $photo->id }}" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal fade bd-example-modal-lg" id="modal{{ $photo->id }}" tabindex="-1" role="dialog"
+                        aria-hidden="true">
                         <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -56,17 +58,7 @@
             </div>
             <div class="row mt-5">
                 <div class="col text-center">
-                    <div class="block-27">
-                        <ul>
-                            <li><a href="#">&lt;</a></li>
-                            <li class="active"><span>1</span></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li><a href="#">&gt;</a></li>
-                        </ul>
-                    </div>
+                    {{ $galleries->links() }}
                 </div>
             </div>
         </div>

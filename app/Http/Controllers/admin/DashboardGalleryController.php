@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use App\Models\Gallery;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class DashboardGalleryController extends Controller
 {
@@ -114,7 +115,9 @@ class DashboardGalleryController extends Controller
 	 */
 	public function destroy(Gallery $gallery)
 	{
-		//
+		Gallery::destroy($gallery->id);
+		Storage::delete($gallery->photo);
+		return redirect()->route('admin.gallery')->with('success', 'Foto berhasil dihapus.');
 	}
 
 // public function upload(Request $request)

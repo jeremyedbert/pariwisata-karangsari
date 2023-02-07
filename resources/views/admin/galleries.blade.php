@@ -9,6 +9,11 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
+                        @if (session('success'))
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                {{ session('success') }}
+                            </div>
+                        @endif
                         <div class="card">
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -16,8 +21,8 @@
                                         <thead>
                                             <tr>
                                                 <th>Caption</th>
-																								<th>Ditambahkan oleh</th>
-																								<th>Ditambahkan pada</th>
+                                                <th>Ditambahkan oleh</th>
+                                                <th>Ditambahkan pada</th>
                                                 <th>Foto</th>
                                                 <th>Action</th>
                                             </tr>
@@ -26,14 +31,58 @@
                                             @foreach ($galleries as $photo)
                                                 <tr>
                                                     <td>{{ $photo->caption }}</td>
-																										<td>{{ $photo->admin->name }}</td>
-																										<td>{{ $photo->created_at->translatedFormat('d F Y') }}</td>
-                                                    <td><img src="{{ asset('storage/' . $photo->photo) }}" alt="{{ $photo->caption }}" height=280></img></td>
+                                                    <td>{{ $photo->admin->name }}</td>
+                                                    <td>{{ $photo->created_at->translatedFormat('d F Y') }}</td>
+                                                    <td><img src="{{ asset('storage/' . $photo->photo) }}"
+                                                            alt="{{ $photo->caption }}" height=280></img></td>
                                                     <td>
-                                                        <a href="{{ route('admin.gallery.edit', $photo->id) }}" class="btn btn-info btn-sm my-2 mx-2"><span><i
+                                                        <a href="{{ route('admin.gallery.edit', $photo->id) }}"
+                                                            class="btn btn-info btn-sm my-2 mx-2"><span><i
                                                                     class="fas fa-eye"></i></span> Edit</a>
+                                                        <a href="#" data-toggle="modal"
+                                                            data-target="#del{{ $photo->id }}"
+                                                            class="btn btn-danger btn-sm my-2 mx-2"><span><i
+                                                                    class="fas fa-trash"></i></span> Delete</a>
                                                     </td>
                                                 </tr>
+
+                                                {{-- Modal Delete --}}
+                                                <div class="modal fade bd-example-modal-sm" id="del{{ $photo->id }}"
+                                                    tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                                                    aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h2 class="modal-title" id="exampleModalLongTitle">
+                                                                    Konfirmasi Penerimaan</h2>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                    aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div>
+                                                                    <h4><b>Terima pendaftaran ini? </b></h4>
+                                                                    <a
+                                                                        href="{{ route('admin.gallery.destroy', $photo->id) }}">Cek
+                                                                        kembali detail</a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-light btn-sm"
+                                                                    data-dismiss="modal">Batal</button>
+                                                                <form
+                                                                    action="{{ route('admin.gallery.destroy', $photo->id) }}"
+                                                                    method="post" class="d-inline">
+                                                                    @method('delete')
+                                                                    @csrf
+                                                                    <button class="btn btn-success btn-sm">Delete</button>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {{-- End of modal --}}
                                             @endforeach
                                         </tbody>
                                     </table>

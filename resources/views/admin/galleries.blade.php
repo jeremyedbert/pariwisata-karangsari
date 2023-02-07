@@ -62,7 +62,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                                 <div>
-                                                                    <h4><b>Foto yang sudah Anda hapus tidak bisa dikebalikan lagi</b></h4>
+                                                                    <h4><b>Foto yang sudah Anda hapus tidak bisa dikembalikan lagi</b></h4>
                                                                 </div>
                                                             </div>
                                                             <div class="modal-footer">

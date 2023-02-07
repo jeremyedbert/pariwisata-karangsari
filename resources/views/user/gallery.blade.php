@@ -21,7 +21,7 @@
             <div class="row d-flex">
                 {{-- Looping --}}
                 @foreach ($galleries as $photo)
-                    <div class="col-lg-4 d-flex ftco-animate">
+                    <div class="col-md-4 d-flex ftco-animate">
                         <div class="blog-entry w-100 justify-content-end">
                             <a href="#" class="block-20" data-toggle="modal" data-target="#modal{{ $photo->id }}"
                                 style="background-image: url('storage/{{ $photo->photo }}');">

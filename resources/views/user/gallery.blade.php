@@ -18,12 +18,12 @@
     <section class="ftco-section">
         <div class="container">
             <div class="row d-flex">
-							{{-- Looping --}}
+                {{-- Looping --}}
                 @foreach ($galleries as $photo)
                     <div class="col-md-3 d-flex ftco-animate">
                         <div class="blog-entry w-100 justify-content-end">
                             <a href="#" class="block-20" data-toggle="modal" data-target="#modal{{ $photo->id }}"
-                                style="background-image: url('assets/user/{{ $photo->photo }}');">
+                                style="background-image: url('storage/{{ $photo->photo }}');">
                             </a>
                             <div class="text mt-3 float-right w-100">
                                 <p>{{ $photo->caption }}
@@ -33,17 +33,20 @@
                     </div>
 
                     {{-- Modal --}}
-                    <div class="modal fade" id="modal{{ $photo->id }}" tabindex="-1" role="dialog" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
+                    <div class="modal fade bd-example-modal-lg" id="modal{{ $photo->id }}" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
+                                    <p>{{ $photo->caption }}</p>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <img src="{{ url('assets/user/' . $photo->photo) }}" alt=""
-                                        style="height: 620px;">
+                                    <div class="d-flex justify-content-center">
+                                        <img src="{{ asset('storage/' . $photo->photo) }}" alt="{{ $photo->caption }}"
+                                            class="img-fluid" style="max-height:540px; width:auto">
+                                    </div>
                                 </div>
                             </div>
                         </div>

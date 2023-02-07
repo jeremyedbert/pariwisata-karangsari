@@ -54,7 +54,7 @@
                                                         <div class="modal-content">
                                                             <div class="modal-header">
                                                                 <h2 class="modal-title" id="exampleModalLongTitle">
-                                                                    Hapus?</h2>
+                                                                    Hapus Foto <i>"{{ $photo->caption }}"</i> ?</h2>
                                                                 <button type="button" class="close" data-dismiss="modal"
                                                                     aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>

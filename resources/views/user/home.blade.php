@@ -62,7 +62,7 @@
                                 <div class="icon"><span class="flaticon-map"></span></div>
                                 <div class="media-body">
                                     <h3 class="heading mb-3">Lokasi</h3>
-                                    <p>Dusun Kaliwisnu, Desa Lumeneng, Kecamatan Paninggaran, Kabupaten Pekalongan
+                                    <p>{{ $tour[0]->location }}
                                     </p>
                                 </div>
                             </div>

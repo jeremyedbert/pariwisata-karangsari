@@ -21,14 +21,14 @@ class AdminSeeder extends Seeder
 			'password' => bcrypt('novinasukha')
 		]);
 		Admin::create([
-			'username' => 'pakcarik',
-			'name' => 'Pak Carik',
-			'password' => bcrypt('pakcarik')
+			'username' => 'uripwidodo',
+			'name' => 'Urip Widodo',
+			'password' => bcrypt('uripwidodo')
 		]);
 		Admin::create([
-			'username' => 'adminadmin',
-			'name' => 'Admin',
-			'password' => bcrypt('adminadmin')
+			'username' => 'zainalarifin',
+			'name' => 'Zainal Arifin',
+			'password' => bcrypt('zainalarifin')
 		]);
 	}
 }

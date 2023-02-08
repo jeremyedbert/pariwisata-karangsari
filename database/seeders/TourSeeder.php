@@ -17,7 +17,7 @@ class TourSeeder extends Seeder
 	{
 		Tour::create([
 			'admin_id' => '1',
-			'name' => 'Wisata Dusun Karangsari',
+			'name' => 'Wisata Dusun Kaliwisnu',
 			'contact' => '08123456789',
 			'instagram' => 'instagram',
 			'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed velit ac quam mattis commodo ut et sapien. Sed odio ex, ultricies ac hendrerit eu, malesuada ut leo. Nam placerat nulla lorem, id malesuada augue volutpat et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum suscipit suscipit tempor. Phasellus ut viverra nulla, at ultricies mauris. Cras magna turpis, mattis tristique odio quis, convallis sollicitudin odio. Donec cursus ornare diam, eu scelerisque nisl ultrices eleifend. Maecenas iaculis, diam in varius convallis, purus risus malesuada velit, quis finibus leo ex sit amet enim. Duis pretium placerat purus eget condimentum. Aenean arcu.',

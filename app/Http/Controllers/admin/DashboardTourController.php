@@ -16,7 +16,8 @@ class DashboardTourController extends Controller
 	public function index()
 	{
 		return view('admin.tour', [
-			'tour' => Tour::where('id', '=', 1)->get()
+			'tour' => Tour::where('id', '=', 1)->get(),
+			'title' => 'Wisata'
 		]);
 	}
 
@@ -61,7 +62,8 @@ class DashboardTourController extends Controller
 	public function edit(Tour $tour)
 	{
 		return view('admin.edit_tour', [
-			'tour' => Tour::where('id', '=', 1)->get()
+			'tour' => Tour::where('id', '=', 1)->get(),
+			'title' => 'Edit Wisata'
 		]);
 	}
 

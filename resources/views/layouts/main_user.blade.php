@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <title>Vacation - Free Bootstrap 4 Template by Colorlib</title>
+    <title>{{ $title }} - Kaliwisnu Tour</title>
+		<link rel="icon" href={{ url('assets/user/images/tumbuh.png') }} type="image/x-icon" />
     @include('partials.header_user')
 </head>
 

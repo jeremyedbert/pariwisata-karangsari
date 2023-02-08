@@ -10,7 +10,8 @@ class ContactController extends Controller
   public function index() {
 		// dd(Tour::where('id', 1)->get());
 		return view('user.contact', [
-			'tour' => Tour::where('id', 1)->get()
+			'tour' => Tour::where('id', 1)->get(),
+			'title' => 'Kontak'
 		]);
 	}
 }

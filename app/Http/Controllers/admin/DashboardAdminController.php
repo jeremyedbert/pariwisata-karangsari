@@ -17,7 +17,8 @@ class DashboardAdminController extends Controller
 	public function index()
 	{
 		return view('admin.setting', [
-			'admins' => Admin::all()
+			'admins' => Admin::all(),
+			'title' => 'Admin'
 		]);
 	}
 
@@ -28,7 +29,9 @@ class DashboardAdminController extends Controller
 	 */
 	public function create()
 	{
-		return view('admin.add_admin');
+		return view('admin.add_admin', [
+			'title' => 'Tambah Admin'
+		]);
 	}
 
 	/**
@@ -93,7 +96,8 @@ class DashboardAdminController extends Controller
 	public function edit(Admin $admin)
 	{
 		return view('admin.edit_admin', [
-			'admin' => $admin
+			'admin' => $admin,
+			'title' => 'Edit Admin'
 		]);
 	}
 

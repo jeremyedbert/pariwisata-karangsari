@@ -16,7 +16,8 @@ class HomeController extends Controller
 	{
 		// return dd(Tour::where('id', '=', 1)->get());
 		return view('user.home', [
-			'tour' => Tour::where('id', '=', 1)->get()
+			'tour' => Tour::where('id', '=', 1)->get(),
+			'title' => 'Home'
 		]);
 	}
 

@@ -17,7 +17,8 @@ class DashboardGalleryController extends Controller
 	public function index()
 	{
 		return view('admin.galleries', [
-			'galleries' => Gallery::all()
+			'galleries' => Gallery::all(),
+			'title' => 'Galeri'
 		]);
 	}
 
@@ -28,7 +29,9 @@ class DashboardGalleryController extends Controller
 	 */
 	public function create()
 	{
-		return view('admin.add_photo');
+		return view('admin.add_photo', [
+			'title' => 'Tambah Foto'
+		]);
 	}
 
 	/**
@@ -80,7 +83,8 @@ class DashboardGalleryController extends Controller
 	public function edit(Gallery $gallery)
 	{
 		return view('admin.edit_photo', [
-			'photo' => $gallery
+			'photo' => $gallery,
+			'title' => 'Edit Foto'
 		]);
 	}
 

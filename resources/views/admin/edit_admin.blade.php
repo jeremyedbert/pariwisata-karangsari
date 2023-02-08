@@ -4,7 +4,7 @@
         <div class="content">
             <div class="page-inner">
                 <div class="page-header">
-                    <h1 class="pb-3"><b>Edit Pengguna</b></h1>
+                    <h1 class="pb-3"><b>Edit Admin</b></h1>
                 </div>
                 <div class="row">
                     <div class="col-md-12">

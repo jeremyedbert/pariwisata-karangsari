@@ -31,9 +31,9 @@
                             <div class="media block-6 services d-block">
                                 <div class="icon"><span class="flaticon-paragliding"></span></div>
                                 <div class="media-body">
-                                    <h3 class="heading mb-3">Aktivitas</h3>
-                                    <p>Tempat yang cocok untuk camping dan melihat sunrise dan sunset
-                                    </p>
+																	<h3 class="heading mb-3">Harga</h3>
+																	<p class="mb-0">Harga Dewasa: Rp {{ number_format($tour[0]->adult_price, 0, ',', '.') }}</p>
+																	<p>Harga Anak: Rp {{ number_format($tour[0]->child_price, 0, ',', '.') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -62,7 +62,7 @@
                                 <div class="icon"><span class="flaticon-map"></span></div>
                                 <div class="media-body">
                                     <h3 class="heading mb-3">Lokasi</h3>
-                                    <p>Dusun Karangsari, Desa Lumeneng, Kecamatan Paninggaran, Kabupaten Pekalongan
+                                    <p>Dusun Kaliwisnu, Desa Lumeneng, Kecamatan Paninggaran, Kabupaten Pekalongan
                                     </p>
                                 </div>
                             </div>
@@ -137,7 +137,7 @@
                                         <div class="user-img"
                                             style="background-image: url(assets/user/images/person_1.jpg)"></div>
                                         <div class="pl-3">
-                                            <p class="name">Mas Faqih</p>
+                                            <p class="name">Faqih Go Green</p>
                                             <span class="position">Founder Manasuka</span>
                                         </div>
                                     </div>
@@ -151,9 +151,9 @@
                                         Vokalia and Consonantia, there live the blind texts.</p>
                                     <div class="d-flex align-items-center">
                                         <div class="user-img"
-                                            style="background-image: url(assets/user/images/person_2.jpg)"></div>
+                                            style="background-image: url(assets/user/images/NoviNasukha.jpg)"></div>
                                         <div class="pl-3">
-                                            <p class="name">Bu Novi</p>
+                                            <p class="name">Novi Nasukha</p>
                                             <span class="position">Perangkat Desa</span>
                                         </div>
                                     </div>
@@ -166,10 +166,10 @@
                                     <p class="mb-4">Gunung kembarnya indah banget.</p>
                                     <div class="d-flex align-items-center">
                                         <div class="user-img"
-                                            style="background-image: url(assets/user/images/person_3.jpg)"></div>
+                                            style="background-image: url(assets/user/images/ZainalArifin.jpg)"></div>
                                         <div class="pl-3">
                                             <p class="name">Ngab Arifin</p>
-                                            <span class="position">Ngab ngab ngab</span>
+                                            <span class="position">Perangkat Desa</span>
                                         </div>
                                     </div>
                                 </div>

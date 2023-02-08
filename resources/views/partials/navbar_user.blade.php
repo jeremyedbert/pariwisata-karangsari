@@ -10,7 +10,7 @@
             <div class="coba">
                 <img src="{{ url('assets/images/logo_paninggaran.png') }}" alt="" style="max-width: 3rem">
                 <div>
-                    Lumeneng
+                    Kaliwisnu
                     <span>Tour</span>
                 </div>
             </div>

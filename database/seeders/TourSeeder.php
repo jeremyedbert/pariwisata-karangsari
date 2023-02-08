@@ -25,7 +25,7 @@ class TourSeeder extends Seeder
 			'close_hour' => '19.00',
 			'adult_price' => '40000',
 			'child_price' => '10000',
-			'location' => 'Desa Lumeneng'
+			'location' => 'Dusun Kaliwisnu, Desa Lumeneng'
 		]);
 	}
 }
